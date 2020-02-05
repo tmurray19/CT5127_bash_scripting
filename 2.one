@@ -1,0 +1,25 @@
+#!/bin/bash
+echo " Creating Directories and Files in scripts "
+# change your working directory
+cd ~/week2
+# create a new dir
+mkdir Test
+# change your working directory
+cd Test
+# present working directory
+pwd
+# create an empty file
+touch file.sh
+# write text to an empty script 
+echo "echo Hello World from file.sh!" > file.sh
+# write the listing of dir to another file
+ls -l file.sh > ls_output.txt
+# change execute permissions on the new script
+chmod 755 file.sh
+# write the listing of dir to the file
+ls -l file.sh >> ls_output.txt
+# execute the script
+./file.sh
+# echo update to user and output the listing file
+echo "Contents of ls_output.txt"
+cat ls_output.txt
